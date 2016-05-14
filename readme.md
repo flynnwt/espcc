@@ -6,15 +6,17 @@
 ## Background Info
 This project is an implementation of an ESP8266 interface to a Current Cost Envi 
 power monitor (https://hackaday.io/project/8232-live-wire-esp8266envi).  It was written before features like SPIFFS were
-available, so it has much room for improvement.  It also includes a DHT-22 temperature/humidity
+available, so it has much room for improvement.  It also includes a DHT22 temperature/humidity
 device.
 
 At this point, the hardware/code has been running about 6 months (466K samples stored
-on thingspeak.com).  The code here is slightly repackaged for github.  It compiles, but I haven't 
-loaded this version on hardware to ensure nothing was broken.
+on thingspeak.com).  
 
 ## Goals
 
+1. Interface to Current Cost Envi
+1. Interface to DHT22
+1. Save samples to thingspeak.com
 
 ## Dependencies
 
