@@ -1,4 +1,7 @@
 # ESP8266 Current Cost Envi
+![alt tag](https://raw.githubusercontent.com/flynnwt/espcc/master/espcc/livewire-screen.png)
+
+![alt tag](https://raw.githubusercontent.com/flynnwt/espcc/master/espcc/livewire-thingspeak.png)
 
 ## Background Info
 This project is an implementation of an ESP8266 interface to a Current Cost Envi 
@@ -33,3 +36,38 @@ loaded this version on hardware to ensure nothing was broken.
 
 0. serial console output (Serial1) for debug/monitoring
 
+### Testing
+
+Send a sample at 57600 to UART0:
+
+```
+<msg><src>CC128-v0.15</src><dsb>01790</dsb><time>18:41:25</time><tmprF>74.0</tmprF><sensor>0</sensor><id>03764</id><type>1</type><ch1><watts>00655</watts></ch1><ch2><watts>00532</watts></ch2></msg>
+```
+ 
+
+## Examples
+
+```
+http://192.168.0.105/api/system
+{
+"started":1463212161,
+"samples":2350,
+"bad":22,
+"skipped":352,
+"truncated":0,
+"failedConnects":0,
+"failedPosts":0,
+"timeoutPosts":394
+}
+
+http://192.168.0.105/api/last
+{
+"id":4675,
+"ts":1463227764,
+"watts1":629,
+"watts2":624,
+"temp":71.40,
+"dhtT":69.98,
+"dhtH":35.90
+}
+```
